@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <h2>Portfolio</h2>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button onclick="gravityMode()">Activate Gravity 🪂</button></li>
+</li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1 id="heroTitle"></h1>
+    <p>Technical Executive @CodeX | Member @ ARVR and Game Development Club | Cloud Co-Head @ ACM Student Chapter club | Perennial Curious Thinker</p>
+    <button onclick="emojiRain()">Click here to see shower of pompoms (believe me it's worth it) </button>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+     I'm a very curious person who wants to be a part of the WebDev department of GDSC. </br>
+     I have worked on a lot of stuff in my first year especially in terms of learning about
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <h3>Project 1</h3>
+      <p>Made an automatic file organizer in python</p>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">Click here</a>
+
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+   <section id = "skills">
+    <h2>Skills</h2>
+    <div class="project-card">
+        <h3>Languages</h3>
+        <p>Python, C++</p>
+        <p>Basic Understanding of SQL</p>
+        <p>Performed a set of tasks in interview for CodeX</p>
+    </div>
+   </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:lakshya.agarwal747@gmail.com">lakshya.agarwal747@gmail.com</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Lakshya Agarwal</p>
+    <p><a href = "https://github.com/Lakshya747">@ Github</href></p>
+    <p><a href = "https://www.instagram.com/">@ Instagram</a></p>
+  </footer>
+
+  <!-- Confetti Container-->
+   <div id ="confetti-container"></div>
+   <div id="emoji-container"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
