@@ -3,48 +3,7 @@ document.getElementById("hireBtn").addEventListener("click", () => {
   launchConfetti(); // 🎉 Confetti starts here
 });
 
-// Confetti function
-function launchConfetti() {
-  const container = document.getElementById("confetti-container");
-
-  for (let i = 0; i < 100; i++) {
-    const confetti = document.createElement("div");
-    confetti.classList.add("confetti");
-
-    // Random position
-    confetti.style.left = Math.random() * 100 + "vw";
-
-    // Random color
-    confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
-
-    // Random size
-    const size = Math.random() * 8 + 5;
-    confetti.style.width = size + "px";
-    confetti.style.height = size + "px";
-
-    // Random animation duration
-    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-
-    container.appendChild(confetti);
-
-    // Remove after animation ends
-    setTimeout(() => {
-      confetti.remove();
-    }, 5000);
-  }
-}
-
-document.addEventListener("mousemove", (e) => {
-  const emoji = document.createElement("div");
-  emoji.textContent = "😂";
-  emoji.style.position = "absolute";
-  emoji.style.left = e.pageX + "px";
-  emoji.style.top = e.pageY + "px";
-  emoji.style.fontSize = "20px";
-  document.body.appendChild(emoji);
-  setTimeout(() => emoji.remove(), 500);
-});
-
+// Gravity Mode
 function gravityMode() {
   document.querySelectorAll("h1, h2, p, .project-card, nav, footer, button").forEach(el => {
     el.style.transition = "transform 1s ease";
@@ -59,9 +18,10 @@ function gravityMode() {
   }, 2000);
 }
 
-
+// Typing effect for heroTitle
 const text = "Helloji, I am Lakshya Agarwal!!!";
 let i = 0;
+
 function typeWriter() {
   if (i < text.length) {
     document.getElementById("heroTitle").textContent += text.charAt(i);
@@ -69,9 +29,13 @@ function typeWriter() {
     setTimeout(typeWriter, 150);
   }
 }
-typeWriter();
 
+window.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("heroTitle").textContent = "";
+  typeWriter();
+});
 
+// Emoji Rain
 function emojiRain() {
   const container = document.getElementById("emoji-container");
   const emojis = ["😂","🐱","🍕","💻","🔥","🚀"];
@@ -89,4 +53,3 @@ function emojiRain() {
     setTimeout(() => e.remove(), 5000);
   }
 }
-
